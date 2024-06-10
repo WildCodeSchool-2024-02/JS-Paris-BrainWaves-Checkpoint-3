@@ -6,10 +6,13 @@ const router = express.Router();
 // Define Your API Routes Here
 /* ************************************************************************* */
 
-const { browse } = require("../../../controllers/boatActions");
+const { browse, read, edit } = require("../../../controllers/boatActions");
 
 router.get("/", browse);
 
+router.get("/:id", read);
+
+router.put("/:id", edit);
 /* ************************************************************************* */
 
 module.exports = router;
