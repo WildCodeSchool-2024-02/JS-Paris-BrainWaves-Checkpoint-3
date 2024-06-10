@@ -15,6 +15,13 @@ class TileRepository extends AbstractRepository {
     return rows;
   }
 
+  async readByCoordinates(x, y) {
+    const [tile] = await this.database.query(
+      `select * from ${this.table} where coord_x = ? and coord_y = ?`, [x, y]
+    );
+    return tile 
+  }
+
   async getRandomIsland() {
     const [rows] = await this.database.query(
       `select id from ${this.table} where type="island" order by rand() limit 1`
