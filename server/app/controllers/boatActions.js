@@ -13,7 +13,7 @@ const browse = async (req, res, next) => {
   }
 };
 
-const update = async (req, res, next) => {
+const edit = async (req, res, next) => {
   const boat = req.body;
   const {id} = req.params
   try {
@@ -26,5 +26,5 @@ const update = async (req, res, next) => {
 
 module.exports = {
   browse,
-  update,
+  edit,
 };
