@@ -7,8 +7,12 @@ const router = express.Router();
 /* ************************************************************************* */
 
 const { browse } = require("../../../controllers/boatActions");
+const { edit } = require("../../../controllers/boatActions");
 
 router.get("/", browse);
+
+
+router.put("/:id", edit);
 
 /* ************************************************************************* */
 
