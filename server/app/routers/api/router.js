@@ -14,7 +14,9 @@ const gamesRouter = require("./games/router");
 
 router.use("/games", gamesRouter);
 
+const tilesRouter = require("./tiles/router");
 
+router.use("./tiles", tilesRouter);
 
 /* ************************************************************************* */
 
