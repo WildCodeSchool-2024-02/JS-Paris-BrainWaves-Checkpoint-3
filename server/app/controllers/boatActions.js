@@ -12,7 +12,17 @@ const browse = async (req, res, next) => {
     next(err);
   }
 };
+const edit = async(req, res, next) => {
+
+  try {
+    const boat = await tables.boat.update(req.body);
+    res.status(204).json(boat)
+  } catch(err) {
+    next(err)
+  }
+}
 
 module.exports = {
   browse,
+  edit,
 };
