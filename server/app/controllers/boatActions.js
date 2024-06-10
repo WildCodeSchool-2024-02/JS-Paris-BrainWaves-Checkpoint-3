@@ -13,6 +13,17 @@ const browse = async (req, res, next) => {
   }
 };
 
+const edit = async (req, res, next) => {
+  try {
+  const boats = req.body
+  const insertID = await tables.boat.update(boats);
+      res.status(204).json({insertID})
+  } catch (error) {
+      next(error)
+  }
+}
+
 module.exports = {
   browse,
+  edit,
 };
