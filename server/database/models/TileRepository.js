@@ -8,7 +8,7 @@ class TileRepository extends AbstractRepository {
   async readAll() {
     // Execute the SQL SELECT query to retrieve all tiles from the "tile" table
     const [rows] = await this.database.query(
-      `select * from ${this.table} order by coord_y, coord_x`
+      `select * from ${this.table}`
     );
 
     // Return the array of tiles
