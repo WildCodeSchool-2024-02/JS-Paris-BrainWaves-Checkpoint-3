@@ -9,4 +9,13 @@ const browse = async (req, res, next) => {
   }
 };
 
-module.exports = { browse };
+const readByCoordinates = async (req, res, next) => {
+    try {
+        const {coord_x, coord_y} = req.body;
+        const tile = await tables.tile.readByCoordinates(coord_x, coord_y);
+        res.json(tile);
+    } catch (error) {
+       next(error); 
+    }
+}
+module.exports = { browse, readByCoordinates };
