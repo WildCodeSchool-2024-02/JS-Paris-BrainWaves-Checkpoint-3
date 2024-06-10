@@ -25,6 +25,6 @@
     "supertest": "^7.0.0"
   },
   "lint-staged": {
-    "*.sql": "prettier --check"
+    "*.sql": "prettier --check",
   }
 }
