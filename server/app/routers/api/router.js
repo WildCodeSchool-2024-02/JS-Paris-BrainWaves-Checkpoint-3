@@ -18,10 +18,6 @@ const tilesRouter = require("./tiles/router");
 
 router.use("./tiles", tilesRouter);
 
-const tileActions = require("../../controllers/tileActions");
-
-router.use("/api/tileAction", tileActions);
-
 /* ************************************************************************* */
 
 module.exports = router;
