@@ -8,7 +8,7 @@ const router = express.Router();
 
 const { browse } = require("../../../controllers/tileActions");
 
-router.get("/", browse);
+router.get("/tile", browse);
 
 /* ************************************************************************* */
 
